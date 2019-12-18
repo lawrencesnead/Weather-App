@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/d61ceec716.js" crossorigin="anonymous"></script>
+  
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-12 col-centered" id="title">
+            Weather Dashboard
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-left" id="search-col">
+                Search for a City: <br><input type="text" id="city-name">
+                <button><i class="fas fa-search"></i></button>
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                  </div>
+            </div>
+
+            <div class="col-8" id="left-side">
+                <div class="row" id="search-result">
+                    
+                </div>
+                <div class="row" id="forecast">
+                    5 Day Forecast:
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='assets/script.js'></script>
+  </body>
+</html>

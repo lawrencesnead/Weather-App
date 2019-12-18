@@ -1,0 +1,11 @@
+#title {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(47, 53, 53);
+}
+
+#search-col {
+    background-color: lightgray;
+    padding: 20px 30px 20px 30px;
+}
