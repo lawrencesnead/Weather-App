@@ -5,7 +5,13 @@
     background-color: rgb(47, 53, 53);
 }
 
-#search-col {
+#left-side {
     background-color: lightgray;
     padding: 20px 30px 20px 30px;
+}
+
+#search-result {
+    white-space: pre-wrap;
+    border: 1px solid gray;
+    padding: 30px 20px 30px 20px;
 }
