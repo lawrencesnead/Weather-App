@@ -13,6 +13,9 @@
 #search-result-inner, #day1-data, #day2-data, #day3-data, #day4-data, #day5-data {
     white-space: pre-wrap;
 }
+#search-btn {
+    position: absolute;
+}
 
 #search-result-title {
     font-size: 25px;

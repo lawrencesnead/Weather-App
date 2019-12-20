@@ -1,4 +1,40 @@
+var id = "d1d26734a6a0ea8d7681d5c441436a63";
+function geoFindMe() {
+
+  
+  
+    function success(position) {
+      const latitude  = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&APPID="+id,
+            method: "GET"
+        }).then(function (response4) {
+             var tempGeo = response5.main.temp.toFixed(2);
+            var humGeo = response5.main.humidity;
+            var windGeo = (response5.main.wind / 1.609).toFixed(2);
+            var iconcodeGeo = response.weather[0].icon;
+        });
+
+    }
+  
+    function error() {
+      alert('Unable to retrieve your location');
+    }
+  
+    if (!navigator.geolocation) {
+      status.textContent = 'Geolocation is not supported by your browser';
+    } else {
+      
+      navigator.geolocation.getCurrentPosition(success, error);
+    }
+  
+  }
 $(document).ready(function () {
+    Navigator.geolocation;
+    geoFindMe();
+    console.log()
     $('#left-side').hide();
     $('#search1').hide();
     $('#search2').hide();
@@ -20,6 +56,7 @@ $(document).ready(function () {
         if (savedSearches.length > 0) {
             $('#search1').text(savedSearches[0]);
             $('#search1').show();
+        }
             if (savedSearches[1] != null) {
                 $('#search2').text(savedSearches[1]);
                 $('#search2').show();
@@ -48,7 +85,7 @@ $(document).ready(function () {
                 $('#search8').text(savedSearches[7]);
                 $('#search8').show();
             }
-            }
+            
         return savedSearches;
     }
     
@@ -63,11 +100,12 @@ $(document).ready(function () {
             savedSearches = generateHistoryList();
         }
         var UV;
-        var id = "d1d26734a6a0ea8d7681d5c441436a63";
+        
         var city = $('#city-name').val();
         
         savedSearches.push(city);
         localStorage.setItem("searches", JSON.stringify(savedSearches.reverse()));
+        savedSearches = generateHistoryList();
         console.log(savedSearches)
         var queryURL1 = "http://api.openweathermap.org/data/2.5/weather?q=" + city +"&units=imperial&APPID="+id;
         $.ajax({
