@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/style.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/d61ceec716.js" crossorigin="anonymous"></script>
+    <script src="assets/moment.min.js"></script>
   
   </head>
   <body>
@@ -21,30 +22,77 @@
         <div class="row">
             <div class="col-4 col-left" id="search-col">
                 Search for a City: <br><input type="text" id="city-name">
-                <button><i class="fas fa-search" id="search-btn"></i></button>
+                <button type="button" class="btn btn-primary" id="search-btn"><i class="fas fa-search" ></i></button>
                 <br>
                 <br>
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;" id="search-history">
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Cras justo odio</li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item" id="search1"></li>
+                      <li class="list-group-item" id="search2"></li>
+                      <li class="list-group-item" id="search3"></li>
+                      <li class="list-group-item" id="search4"></li>
+                      <li class="list-group-item" id="search5"></li>
+                      <li class="list-group-item" id="search6"></li>
+                      <li class="list-group-item" id="search7"></li>
+                      <li class="list-group-item" id="search8"></li>
                     </ul>
                   </div>
             </div>
 
             <div class="col-8" id="left-side">
-                <div class="row" id="search-result">
-                    <div class="name"></div>
-                    
+                <div class="border-wrapper">
+                    <div class="row" id="search-result-title"></div>
+                    <div class="row" id="search-result-inner"></div>
                 </div>
+                
                 <div class="row" id="forecast">
                     5 Day Forecast:
+                    <div class="row">
+                    
+                        <div class="card text-white bg-primary mb-3" style="width: max-content;">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day1-title">Primary card title</h5>
+                                <img id="weather-icon1">
+                                <p class="card-text" id="day1-data"></p>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="card text-white bg-primary mb-3" style="width: max-content;">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day2-title">Primary card title</h5>
+                                <img id="weather-icon2">
+                                <p class="card-text" id="day2-data"></p>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="card text-white bg-primary mb-3" style="width: max-content;">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day3-title">Primary card title</h5>
+                                <img id="weather-icon3">
+                                <p class="card-text" id="day3-data"></p>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="card text-white bg-primary mb-3" style="width: max-content;">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day4-title">Primary card title</h5>
+                                <img id="weather-icon4">
+                                <p class="card-text" id="day4-data"></p>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="card text-white bg-primary mb-3" style="width: max-content;">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day5-title">Primary card title</h5>
+                                <img id="weather-icon5">
+                                <p class="card-text" id="day5-data"></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

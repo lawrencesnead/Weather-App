@@ -10,8 +10,34 @@
     padding: 20px 30px 20px 30px;
 }
 
-#search-result {
+#search-result-inner, #day1-data, #day2-data, #day3-data, #day4-data, #day5-data {
     white-space: pre-wrap;
-    border: 1px solid gray;
-    padding: 30px 20px 30px 20px;
 }
+
+#search-result-title {
+    font-size: 25px;
+    font-weight: 700;
+}
+#forecast {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.card-text, .card-title {
+    font-size: 16px;
+    font-weight: 400;
+}
+.border-wrapper {
+    border: 1px solid gray;
+    padding: 30px 20px 30px 50px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+.card {
+    margin: 5px;
+}
+
