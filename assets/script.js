@@ -8,13 +8,21 @@ function geoFindMe() {
         const longitude = position.coords.longitude;
         
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&APPID="+id,
+            url: "http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&units=imperial&APPID="+id,
             method: "GET"
-        }).then(function (response4) {
-             var tempGeo = response5.main.temp.toFixed(2);
+        }).then(function (response5) {
+            $('#left-side').show();
+            $('#forecast').hide();
+            var tempGeo = response5.main.temp.toFixed(2);
             var humGeo = response5.main.humidity;
-            var windGeo = (response5.main.wind / 1.609).toFixed(2);
-            var iconcodeGeo = response.weather[0].icon;
+            var windGeo = ((response5.wind.speed) / 1.609).toFixed(2);
+            var iconcodeGeo = response5.weather[0].icon;
+            $('#search-result-title').text("Lat: "+latitude.toFixed(2)+" Long:"+longitude.toFixed(2));
+            var weatherIcon= $("<img>");
+            var iconurl = "http://openweathermap.org/img/wn/" + iconcodeGeo + "@2x.png";
+            weatherIcon.attr("src", iconurl);
+            $("#search-result-inner").text("Temperature: " + tempGeo + " °F\n\n Humidity: " + humGeo + " %\n\n Wind Speed: " + windGeo +" MPH");
+            weatherIcon.appendTo('#search-result-title');
         });
 
     }
@@ -96,6 +104,7 @@ $(document).ready(function () {
 
     function citySearch() {
         $('#left-side').show();
+        $('#forecast').show();
         if (savedSearches.length > 0) {
             savedSearches = generateHistoryList();
         }
